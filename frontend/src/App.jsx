@@ -30,7 +30,7 @@ int main() {
   }
 
   async function runCode() {
-    const res = await fetch('http://localhost:3001/run', {
+    const res = await fetch('https://gamez-ide-backend.onrender.com/run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code, input })
