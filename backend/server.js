@@ -19,7 +19,7 @@ app.post('/run', (req, res) => {
   fs.writeFileSync('main.cpp', code)
   fs.writeFileSync('input.txt', input || '')
 
-  exec('g++ main.cpp -o main && ./main < input.txt', (err, stdout, stderr) => {
+  exec('g++ main.cpp -o program && ./program < input.txt', (err, stdout, stderr) => {
     if (err) {
       return res.json({ error: stderr || err.message })
     }
